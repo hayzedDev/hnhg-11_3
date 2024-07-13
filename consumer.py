@@ -18,11 +18,11 @@ def send_email(to_email):
     smtp_password = os.getenv('BREVO_SMTP_PASSWORD')
 
     msg = MIMEMultipart()
-    msg['From'] = smtp_user
+    msg['From'] = 'azeezade04@gmail.com'
     msg['To'] = to_email
     msg['Subject'] = 'Testing Shege'
 
-    body = "Welcome to HNG. If you're seeing this, it means @HayzedDev is done with his task"
+    body = "Welcome. If you're seeing this, it means @HayzedDev is done with his task"
     msg.attach(MIMEText(body, 'plain'))
 
     server = smtplib.SMTP(smtp_server, smtp_port)
